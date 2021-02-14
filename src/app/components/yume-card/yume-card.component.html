@@ -1,0 +1,50 @@
+<nz-card style="width:300px;" [nzCover]="coverTemplate" [nzActions]="[actionSetting, actionEdit, actionEllipsis]">
+    <nz-card-meta [nzTitle]="item.ItemName"  [nzAvatar]="avatarTemplate"></nz-card-meta>
+    <div>${{item.chosenSizePrice + item.Price +item.chosenToppingPrice}}</div>
+    <div>Quantity: {{item.Quantity}}</div>
+    
+</nz-card>
+  <ng-template #avatarTemplate>
+    <nz-avatar [nzSrc]="item.Image"></nz-avatar>
+  </ng-template>
+  <ng-template #coverTemplate>
+    <img alt="example" [src]="item.Image" />
+  </ng-template>
+  
+  <ng-template #actionSetting>
+    <i nz-icon nzType="plus" (click)="plusOne()"></i>
+  </ng-template>
+  <ng-template #actionEdit>
+    <i nz-icon nzType="minus" (click)="minusOne()"></i>
+  </ng-template>
+  <ng-template #actionEllipsis>
+    <i nz-icon nzType="ellipsis" (click)="showModal()"></i>
+  </ng-template>
+
+  
+  
+  <nz-modal [(nzVisible)]="isVisible" nzTitle="Options" (nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()">
+    <h2>Toppings</h2>
+    <div *ngFor="let i of item.Toppings">
+
+      <nz-radio-group [(ngModel)]="radioValue_1">
+        <label nz-radio [nzValue]="i.Choice" (click)="updateToppingChosen(i)">{{i.Choice}}  +${{i.Price}}</label> 
+      </nz-radio-group>
+    
+    </div>
+    
+    <h2>Sizes</h2>
+    <div *ngFor="let i of item.Sizes">
+
+      <nz-radio-group [(ngModel)]="radioValue_2">
+        <label nz-radio [nzValue]="i.Choice" (click)="updateSizeChosen(i)">{{i.Choice}} +${{i.Price}}</label> 
+      </nz-radio-group>
+    
+    </div>
+
+    <h2>Description</h2>
+    <p>{{item.Description}}</p>
+
+    
+  </nz-modal>
+  

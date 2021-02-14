@@ -1,0 +1,17 @@
+<div nz-row nzJustify="space-between" [nzGutter]="['8', '24']">
+    <!-- <div *ngFor="let item of m_data"> -->
+    <div *ngFor="let item of this.menu.getData()">   
+        <div *ngIf="item.Quantity > 0">
+            <div nz-col nzSpan="4">
+                <app-yume-card [item] ="item" [m_content]="item.Toppings"></app-yume-card>
+            </div>
+        </div>
+   </div>   
+</div>
+
+<app-yume-pay [m_subTotal]="this.getTotal().toFixed(2)"[m_tax]="(this.getTotal()*0.1025).toFixed(2)" [m_total]="(this.getTotal()*1.1025).toFixed(2)"></app-yume-pay>
+
+
+<app-yume-stripe></app-yume-stripe>
+
+

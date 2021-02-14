@@ -1,0 +1,35 @@
+<ngx-stripe-card-group
+  [formGroup]="stripeTest"
+  [elementsOptions]="elementsOptions"
+>
+  <input  placeholder="Full Name" formControlName="name" />
+  <input  placeholder="Phone" formControlName="phone" />
+  <input  placeholder="Email (optional)" formControlName="email" />
+  <ngx-stripe-card-number [options]="cardOptions"></ngx-stripe-card-number>
+  <ngx-stripe-card-expiry [options]="cardOptions"></ngx-stripe-card-expiry>
+  <ngx-stripe-card-cvc [options]="cardOptions"></ngx-stripe-card-cvc>
+  <div *ngIf="m_button_flag ==0">
+    <app-yume-spin></app-yume-spin>
+  </div>
+  <div *ngIf="m_button_flag==1 && m_operation_hours == 1  && m_status == 1">
+    <button type="submit" (click)="pay()">
+      PAY
+    </button>
+  </div>
+  <div *ngIf="m_button_flag==2">
+    <app-yume-spin></app-yume-spin>
+  </div>
+  <div *ngIf="m_button_flag==3">
+    <button type="submit" >
+      PAYMENT SUCCEEDED
+    </button>
+    <br>
+    <button nz-button  nzType="default" nzDanger><a href="https://goo.gl/maps/ztXdcBSkrnxY3CBH6" target="_blank">Direction</a></button>
+  </div>
+  <div *ngIf="m_button_flag==4">
+    <button type="submit" >
+      PAYMENT FAILED
+    </button>
+  </div>
+  
+</ngx-stripe-card-group>

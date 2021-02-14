@@ -1,0 +1,42 @@
+<nz-layout class="layout">
+  <nz-sider nzCollapsible nzBreakpoint="lg" [nzCollapsedWidth]="0">
+    <div class="logo">
+      <img height= "30" width="170" class="logoImage"alt="example" src="https://yumemenu.s3-us-west-1.amazonaws.com/Images/logo/yumeLogo.png" />
+    </div>
+    <ul nz-menu nzTheme="dark" nzMode="inline">
+      <li nz-menu-item routerLink="/home">
+        <i nz-icon nzType="home"></i>
+        <span>Home</span>
+      </li>
+      <li nz-menu-item routerLink="/menu">
+        <i nz-icon nzType="shopping"></i>
+        <span>Menu</span>
+      </li>
+      <li nz-menu-item routerLink="/checkout">
+        <i nz-icon nzType="shopping-cart"></i>
+        <span>Checkout</span>
+      </li>
+      <li nz-menu-item routerLink="/location">
+        <i nz-icon nzType="car"></i>
+        <span>Location</span>
+      </li>
+    </ul>
+  </nz-sider>
+  <nz-layout>
+    
+    <nz-content>
+      <div class="inner-content">
+        <router-outlet></router-outlet>
+      </div>
+    </nz-content>
+    <nz-footer>YumeHouse Design ©V2</nz-footer>
+  </nz-layout>
+</nz-layout>
+
+
+
+<!-- <router-outlet></router-outlet>
+<ul>
+  <li><a routerLink="/home">Home</a></li>
+  <li><a routerLink="/menu">Menu</a></li>
+</ul> -->

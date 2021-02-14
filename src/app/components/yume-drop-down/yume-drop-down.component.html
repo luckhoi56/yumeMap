@@ -1,0 +1,12 @@
+<a nzTrigger="click" nz-dropdown [nzDropdownMenu]="menu">
+    <button nz-button nzType="primary" nzDanger>{{m_default}}</button>
+    <i nz-icon nzType="down"></i>
+  </a>
+  <nz-dropdown-menu #menu="nzDropdownMenu">
+    <ul nz-menu>
+       <div *ngFor="let item of m_category">   
+      <li nz-menu-item (click)="log(item)">{{item}}</li>
+      
+      </div>
+    </ul>
+  </nz-dropdown-menu>

@@ -1,0 +1,7 @@
+<h1>Welcome to Yume Location map</h1>
+<p>Business Hours: Monday to Saturday from 11am to 9pm</p>
+<p>Outdoors and indoors seating available. Togo order can be placed directly via this website</p>
+<div *ngIf="m_status == 1 && m_operation_hours == 1; else closeBlock">  
+    <h1>{{m_announcement}}</h1>
+</div>
+<ng-template  #closeBlock><h2>{{m_reason_to_close}}</h2></ng-template>
