@@ -24,7 +24,8 @@ import { NgxStripeModule } from 'ngx-stripe';
 import { FormGroup, FormBuilder, Validators,ReactiveFormsModule  } from '@angular/forms';
 import { YumeSpinComponent } from './components/yume-spin/yume-spin.component';
 import { LocationComponent } from './pages/location/location.component';
-
+import { AgmCoreModule } from '@agm/core';
+import { MapComponent } from './pages/map/map.component';
 registerLocaleData(en);
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ registerLocaleData(en);
     YumeDropDownComponent,
     YumeStripeComponent,
     YumeSpinComponent,
-    LocationComponent
+    LocationComponent,
+    MapComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +50,10 @@ registerLocaleData(en);
     BrowserAnimationsModule,
     MenuModule,
     NgxStripeModule.forRoot("pk_live_51GwwqJJpV9cXOdRhw2mJFANLPJbH5XwafRmdIDPAjfbMBW7Y3tjaOr4jXtMwQknbbdaCO1aTMa0r4GaeqYd8YCvf00Rpo2xypa"),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyDCdWEUdEmkClwVHt3NZsvBjKXWGtJdRWk'
+    })
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent]

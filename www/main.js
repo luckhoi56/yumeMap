@@ -205,6 +205,49 @@ HomeComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComp
 
 /***/ }),
 
+/***/ "5T7I":
+/*!********************************************!*\
+  !*** ./src/app/pages/map/map.component.ts ***!
+  \********************************************/
+/*! exports provided: MapComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MapComponent", function() { return MapComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _agm_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @agm/core */ "pxUr");
+
+
+class MapComponent {
+    constructor() {
+        this.title = 'My first AGM project';
+        this.lat = 51.678418;
+        this.lng = 7.809007;
+    }
+    ngOnInit() {
+    }
+}
+MapComponent.ɵfac = function MapComponent_Factory(t) { return new (t || MapComponent)(); };
+MapComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: MapComponent, selectors: [["app-map"]], decls: 4, vars: 5, consts: [[3, "latitude", "longitude"]], template: function MapComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "h1");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "agm-map", 0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "agm-marker", 0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    } if (rf & 2) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](ctx.title);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("latitude", ctx.lat)("longitude", ctx.lng);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("latitude", ctx.lat)("longitude", ctx.lng);
+    } }, directives: [_agm_core__WEBPACK_IMPORTED_MODULE_1__["AgmMap"], _agm_core__WEBPACK_IMPORTED_MODULE_1__["AgmMarker"]], styles: ["agm-map[_ngcontent-%COMP%] {\r\n    height: 300px;\r\n  }\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIm1hcC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksYUFBYTtFQUNmIiwiZmlsZSI6Im1hcC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiYWdtLW1hcCB7XHJcbiAgICBoZWlnaHQ6IDMwMHB4O1xyXG4gIH0iXX0= */"] });
+
+
+/***/ }),
+
 /***/ "AytR":
 /*!*****************************************!*\
   !*** ./src/environments/environment.ts ***!
@@ -737,7 +780,7 @@ class AppComponent {
     }
 }
 AppComponent.ɵfac = function AppComponent_Factory(t) { return new (t || AppComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"])); };
-AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AppComponent, selectors: [["app-root"]], decls: 27, vars: 1, consts: [[1, "layout"], ["nzCollapsible", "", "nzBreakpoint", "lg", 3, "nzCollapsedWidth"], [1, "logo"], ["height", "30", "width", "170", "alt", "example", "src", "https://yumemenu.s3-us-west-1.amazonaws.com/Images/logo/yumeLogo.png", 1, "logoImage"], ["nz-menu", "", "nzTheme", "dark", "nzMode", "inline"], ["nz-menu-item", "", "routerLink", "/home"], ["nz-icon", "", "nzType", "home"], ["nz-menu-item", "", "routerLink", "/menu"], ["nz-icon", "", "nzType", "shopping"], ["nz-menu-item", "", "routerLink", "/checkout"], ["nz-icon", "", "nzType", "shopping-cart"], ["nz-menu-item", "", "routerLink", "/location"], ["nz-icon", "", "nzType", "car"], [1, "inner-content"]], template: function AppComponent_Template(rf, ctx) { if (rf & 1) {
+AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AppComponent, selectors: [["app-root"]], decls: 31, vars: 1, consts: [[1, "layout"], ["nzCollapsible", "", "nzBreakpoint", "lg", 3, "nzCollapsedWidth"], [1, "logo"], ["height", "30", "width", "170", "alt", "example", "src", "https://yumemenu.s3-us-west-1.amazonaws.com/Images/logo/yumeLogo.png", 1, "logoImage"], ["nz-menu", "", "nzTheme", "dark", "nzMode", "inline"], ["nz-menu-item", "", "routerLink", "/home"], ["nz-icon", "", "nzType", "home"], ["nz-menu-item", "", "routerLink", "/menu"], ["nz-icon", "", "nzType", "shopping"], ["nz-menu-item", "", "routerLink", "/checkout"], ["nz-icon", "", "nzType", "shopping-cart"], ["nz-menu-item", "", "routerLink", "/location"], ["nz-icon", "", "nzType", "car"], ["nz-menu-item", "", "routerLink", "/map"], ["nz-icon", "", "nzType", "google"], [1, "inner-content"]], template: function AppComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "nz-layout", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "nz-sider", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 2);
@@ -768,16 +811,22 @@ AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCompo
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](20, "Location");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](21, "li", 13);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](22, "i", 14);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](23, "span");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](24, "Map");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](21, "nz-layout");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](22, "nz-content");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](23, "div", 13);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](24, "router-outlet");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](25, "nz-footer");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](26, "YumeHouse Design \u00A9V2");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](25, "nz-layout");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](26, "nz-content");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](27, "div", 15);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](28, "router-outlet");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](29, "nz-footer");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](30, "YumeHouse Design \u00A9V2");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -1044,7 +1093,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var ngx_stripe__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ngx-stripe */ "VFot");
 /* harmony import */ var _components_yume_spin_yume_spin_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./components/yume-spin/yume-spin.component */ "MeNJ");
 /* harmony import */ var _pages_location_location_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./pages/location/location.component */ "qmf3");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _agm_core__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! @agm/core */ "pxUr");
+/* harmony import */ var _pages_map_map_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./pages/map/map.component */ "5T7I");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! @angular/core */ "fXoL");
+
+
+
 
 
 
@@ -1073,8 +1127,8 @@ __webpack_require__.r(__webpack_exports__);
 Object(_angular_common__WEBPACK_IMPORTED_MODULE_9__["registerLocaleData"])(_angular_common_locales_en__WEBPACK_IMPORTED_MODULE_10___default.a);
 class AppModule {
 }
-AppModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_21__["ɵɵdefineNgModule"]({ type: AppModule, bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"]] });
-AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_21__["ɵɵdefineInjector"]({ factory: function AppModule_Factory(t) { return new (t || AppModule)(); }, providers: [{ provide: ng_zorro_antd_i18n__WEBPACK_IMPORTED_MODULE_8__["NZ_I18N"], useValue: ng_zorro_antd_i18n__WEBPACK_IMPORTED_MODULE_8__["en_US"] }], imports: [[
+AppModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_23__["ɵɵdefineNgModule"]({ type: AppModule, bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"]] });
+AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_23__["ɵɵdefineInjector"]({ factory: function AppModule_Factory(t) { return new (t || AppModule)(); }, providers: [{ provide: ng_zorro_antd_i18n__WEBPACK_IMPORTED_MODULE_8__["NZ_I18N"], useValue: ng_zorro_antd_i18n__WEBPACK_IMPORTED_MODULE_8__["en_US"] }], imports: [[
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
             _app_routing_module__WEBPACK_IMPORTED_MODULE_1__["AppRoutingModule"],
             _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpClientModule"],
@@ -1082,9 +1136,12 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_21__["ɵɵdefineInjecto
             _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_7__["BrowserAnimationsModule"],
             _menu_menu_module__WEBPACK_IMPORTED_MODULE_11__["MenuModule"],
             ngx_stripe__WEBPACK_IMPORTED_MODULE_18__["NgxStripeModule"].forRoot("pk_live_51GwwqJJpV9cXOdRhw2mJFANLPJbH5XwafRmdIDPAjfbMBW7Y3tjaOr4jXtMwQknbbdaCO1aTMa0r4GaeqYd8YCvf00Rpo2xypa"),
-            _angular_forms__WEBPACK_IMPORTED_MODULE_6__["ReactiveFormsModule"]
+            _angular_forms__WEBPACK_IMPORTED_MODULE_6__["ReactiveFormsModule"],
+            _agm_core__WEBPACK_IMPORTED_MODULE_21__["AgmCoreModule"].forRoot({
+                apiKey: 'AIzaSyDCdWEUdEmkClwVHt3NZsvBjKXWGtJdRWk'
+            })
         ]] });
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_21__["ɵɵsetNgModuleScope"](AppModule, { declarations: [_app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"],
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_23__["ɵɵsetNgModuleScope"](AppModule, { declarations: [_app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"],
         _pages_home_home_component__WEBPACK_IMPORTED_MODULE_3__["HomeComponent"],
         _pages_menu_menu_component__WEBPACK_IMPORTED_MODULE_4__["MenuComponent"],
         _components_yume_card_yume_card_component__WEBPACK_IMPORTED_MODULE_12__["YumeCardComponent"],
@@ -1094,12 +1151,13 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_21__["ɵɵdefineInjecto
         _components_yume_drop_down_yume_drop_down_component__WEBPACK_IMPORTED_MODULE_16__["YumeDropDownComponent"],
         _components_yume_stripe_yume_stripe_component__WEBPACK_IMPORTED_MODULE_17__["YumeStripeComponent"],
         _components_yume_spin_yume_spin_component__WEBPACK_IMPORTED_MODULE_19__["YumeSpinComponent"],
-        _pages_location_location_component__WEBPACK_IMPORTED_MODULE_20__["LocationComponent"]], imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
+        _pages_location_location_component__WEBPACK_IMPORTED_MODULE_20__["LocationComponent"],
+        _pages_map_map_component__WEBPACK_IMPORTED_MODULE_22__["MapComponent"]], imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
         _app_routing_module__WEBPACK_IMPORTED_MODULE_1__["AppRoutingModule"],
         _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpClientModule"],
         _angular_forms__WEBPACK_IMPORTED_MODULE_6__["FormsModule"],
         _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_7__["BrowserAnimationsModule"],
-        _menu_menu_module__WEBPACK_IMPORTED_MODULE_11__["MenuModule"], ngx_stripe__WEBPACK_IMPORTED_MODULE_18__["NgxStripeModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_6__["ReactiveFormsModule"]] }); })();
+        _menu_menu_module__WEBPACK_IMPORTED_MODULE_11__["MenuModule"], ngx_stripe__WEBPACK_IMPORTED_MODULE_18__["NgxStripeModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_6__["ReactiveFormsModule"], _agm_core__WEBPACK_IMPORTED_MODULE_21__["AgmCoreModule"]] }); })();
 
 
 /***/ }),
@@ -1538,7 +1596,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pages_menu_menu_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./pages/menu/menu.component */ "B4DE");
 /* harmony import */ var _pages_checkout_checkout_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./pages/checkout/checkout.component */ "Neos");
 /* harmony import */ var _pages_location_location_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./pages/location/location.component */ "qmf3");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _pages_map_map_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./pages/map/map.component */ "5T7I");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/core */ "fXoL");
+
 
 
 
@@ -1551,13 +1611,14 @@ const routes = [
     { path: 'home', component: _pages_home_home_component__WEBPACK_IMPORTED_MODULE_1__["HomeComponent"] },
     { path: 'menu', component: _pages_menu_menu_component__WEBPACK_IMPORTED_MODULE_2__["MenuComponent"] },
     { path: 'checkout', component: _pages_checkout_checkout_component__WEBPACK_IMPORTED_MODULE_3__["CheckoutComponent"] },
-    { path: 'location', component: _pages_location_location_component__WEBPACK_IMPORTED_MODULE_4__["LocationComponent"] }
+    { path: 'location', component: _pages_location_location_component__WEBPACK_IMPORTED_MODULE_4__["LocationComponent"] },
+    { path: 'map', component: _pages_map_map_component__WEBPACK_IMPORTED_MODULE_5__["MapComponent"] }
 ];
 class AppRoutingModule {
 }
-AppRoutingModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵdefineNgModule"]({ type: AppRoutingModule });
-AppRoutingModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵdefineInjector"]({ factory: function AppRoutingModule_Factory(t) { return new (t || AppRoutingModule)(); }, imports: [[_angular_router__WEBPACK_IMPORTED_MODULE_0__["RouterModule"].forRoot(routes, { relativeLinkResolution: 'legacy' })], _angular_router__WEBPACK_IMPORTED_MODULE_0__["RouterModule"]] });
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵsetNgModuleScope"](AppRoutingModule, { imports: [_angular_router__WEBPACK_IMPORTED_MODULE_0__["RouterModule"]], exports: [_angular_router__WEBPACK_IMPORTED_MODULE_0__["RouterModule"]] }); })();
+AppRoutingModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵdefineNgModule"]({ type: AppRoutingModule });
+AppRoutingModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵdefineInjector"]({ factory: function AppRoutingModule_Factory(t) { return new (t || AppRoutingModule)(); }, imports: [[_angular_router__WEBPACK_IMPORTED_MODULE_0__["RouterModule"].forRoot(routes, { relativeLinkResolution: 'legacy' })], _angular_router__WEBPACK_IMPORTED_MODULE_0__["RouterModule"]] });
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵsetNgModuleScope"](AppRoutingModule, { imports: [_angular_router__WEBPACK_IMPORTED_MODULE_0__["RouterModule"]], exports: [_angular_router__WEBPACK_IMPORTED_MODULE_0__["RouterModule"]] }); })();
 
 
 /***/ }),
