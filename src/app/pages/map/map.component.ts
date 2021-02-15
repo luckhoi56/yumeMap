@@ -10,6 +10,7 @@ import { NzButtonSize } from 'ng-zorro-antd/button';
 export class MapComponent implements OnInit {
   latitude: number;
   longitude: number;
+  m_zoom: number = 16
   size: NzButtonSize = 'large'
   title = 'My first AGM project';
   lat = 51.678418;
