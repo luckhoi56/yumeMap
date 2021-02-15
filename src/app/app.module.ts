@@ -26,6 +26,7 @@ import { YumeSpinComponent } from './components/yume-spin/yume-spin.component';
 import { LocationComponent } from './pages/location/location.component';
 import { AgmCoreModule } from '@agm/core';
 import { MapComponent } from './pages/map/map.component';
+
 registerLocaleData(en);
 @NgModule({
   declarations: [

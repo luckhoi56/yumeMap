@@ -3,7 +3,15 @@
 <!-- this creates a google map on the page with the given lat/lng from -->
 <!-- the component as the initial center of the map: -->
 <agm-map [latitude]="latitude" [longitude]="longitude" [zoom]="m_zoom">
-  <agm-marker [latitude]="latitude" [longitude]="longitude" ></agm-marker>
+  <agm-marker [latitude]="latitude" [longitude]="longitude"></agm-marker>
 </agm-map>
 
-<button nz-button [nzSize]="size" nzType="primary" (click)="getLocation()" >Track</button>
+<button nz-button [nzSize]="size" nzType="primary" (click)="getLocation()">
+  Track
+</button>
+<nz-input-group nzSearch nzSize="large" [nzAddOnAfter]="suffixButton">
+  <input type="text" nz-input placeholder="input search text" />
+</nz-input-group>
+<ng-template #suffixButton>
+  <button nz-button nzType="primary" nzSize="large" nzSearch>Search</button>
+</ng-template>

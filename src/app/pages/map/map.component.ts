@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Geolocation} from '@capacitor/core';
 import { NzButtonSize } from 'ng-zorro-antd/button';
-
+import { NzInputModule } from 'ng-zorro-antd/input';
 @Component({
   selector: 'app-map',
   templateUrl: './map.component.html',

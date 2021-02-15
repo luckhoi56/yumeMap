@@ -16,6 +16,8 @@ import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzSpinModule } from 'ng-zorro-antd/spin';
 import { StripeModule } from "stripe-angular"
+import { NzInputModule } from 'ng-zorro-antd/input';
+
 @NgModule({
   declarations: [],
   imports: [
@@ -35,7 +37,8 @@ import { StripeModule } from "stripe-angular"
     NzDropDownModule,
     NzButtonModule,
     StripeModule.forRoot("pk_live_51GwwqJJpV9cXOdRhw2mJFANLPJbH5XwafRmdIDPAjfbMBW7Y3tjaOr4jXtMwQknbbdaCO1aTMa0r4GaeqYd8YCvf00Rpo2xypa"),
-    NzSpinModule
+    NzSpinModule,
+    NzInputModule
   ],
   exports:[
     NzCardModule,
@@ -52,7 +55,8 @@ import { StripeModule } from "stripe-angular"
     NzStatisticModule,
     NzDropDownModule,
     NzButtonModule,
-    NzSpinModule
+    NzSpinModule,
+    NzInputModule
   ]
 })
 export class MenuModule { }
