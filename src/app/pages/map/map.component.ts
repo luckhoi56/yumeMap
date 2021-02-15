@@ -10,6 +10,8 @@ import { NzInputModule } from 'ng-zorro-antd/input';
 export class MapComponent implements OnInit {
   latitude: number;
   longitude: number;
+  m_latitude: number = 0;
+  m_longitude: number = 0;
   m_zoom: number = 16
   size: NzButtonSize = 'large'
   title = 'My first AGM project';
@@ -23,5 +25,8 @@ export class MapComponent implements OnInit {
   }
   ngOnInit(): void {
   }
-
+  public updateCoord(){
+    this.latitude = this.m_latitude
+    this.longitude = this.m_longitude
+  }
 }

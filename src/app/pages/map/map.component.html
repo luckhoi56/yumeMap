@@ -10,11 +10,11 @@
   Track
 </button>
 <nz-input-group nzSearch nzSize="large" [nzAddOnAfter]="suffixButton">
-  <input type="text" nz-input placeholder="latitude" />
-  <input type="text" nz-input placeholder="longitude" />
+  <input [value]='m_latitude' (input)="m_latitude=$event.target.value" type="text" nz-input placeholder="latitude" />
+  <input [value]='m_longitude' (input)="m_longitude=$event.target.value" type="text" nz-input placeholder="longitude" />
 </nz-input-group>
 <ng-template #suffixButton>
-  <button nz-button nzType="primary" nzSize="large" nzSearch>track</button>
+  <button (click)="updateCoord()"nz-button nzType="primary" nzSize="large" nzSearch>track</button>
 </ng-template>
 <br>
 <br>
