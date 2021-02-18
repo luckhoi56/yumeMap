@@ -14,11 +14,11 @@ export class MapComponent implements OnInit {
   intervalId: number;
   latitude: number;
   longitude: number;
-  m_latitude: number = -117.7;
-  m_longitude: number = 34.05;
-  m_zoom: number = 16
-  m_driver_latitude:number 
-  m_driver_longitude:number
+  m_latitude: number = 34.049400;
+  m_longitude: number = -117.706930;
+  m_zoom: number = 14
+  m_driver_latitude:number = 34.049400
+  m_driver_longitude:number = -117.706930;
   size: NzButtonSize = 'large'
   title = 'My first AGM project';
   lat = 51.678418;
@@ -32,8 +32,8 @@ export class MapComponent implements OnInit {
   ngOnInit(): void {
     const source = interval(20000);
     this.subscription = source.subscribe(() =>{
-       //this.getDriverCoord()
-       console.log("hey")
+       this.getDriverCoord()
+       //console.log("hey")
     }
     );
   }
