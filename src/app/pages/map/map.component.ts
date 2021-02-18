@@ -14,8 +14,8 @@ export class MapComponent implements OnInit {
   intervalId: number;
   latitude: number;
   longitude: number;
-  m_latitude: number = 0;
-  m_longitude: number = 0;
+  m_latitude: number = -117.7;
+  m_longitude: number = 34.05;
   m_zoom: number = 16
   m_driver_latitude:number 
   m_driver_longitude:number
@@ -30,8 +30,12 @@ export class MapComponent implements OnInit {
     this.longitude = position.coords.longitude
   }
   ngOnInit(): void {
-    const source = interval(5000);
-    this.subscription = source.subscribe(() => this.getDriverCoord());
+    const source = interval(20000);
+    this.subscription = source.subscribe(() =>{
+       //this.getDriverCoord()
+       console.log("hey")
+    }
+    );
   }
   public updateCoord(){
     this.latitude = this.m_latitude

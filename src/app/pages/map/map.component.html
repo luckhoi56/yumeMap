@@ -3,10 +3,10 @@
 <!-- this creates a google map on the page with the given lat/lng from -->
 <!-- the component as the initial center of the map: -->
 <agm-map [latitude]="m_driver_latitude" [longitude]="m_driver_longitude" [zoom]="m_zoom">
-  <agm-marker [latitude]="latitude" [longitude]="longitude"></agm-marker>
   <agm-marker [latitude]="m_driver_latitude" [longitude]="m_driver_longitude"></agm-marker>
 </agm-map>
 
+<!-- 
 <button nz-button [nzSize]="size" nzType="primary" (click)="getLocation()">
   Track
 </button>
@@ -20,4 +20,4 @@
 <br>
 <br>
 
-<button (click)="updateDriverCoord()"nz-button nzType="primary" nzSize="large" nzSearch>Get Driver Location</button>
+<button (click)="updateDriverCoord()"nz-button nzType="primary" nzSize="large" nzSearch>Get Driver Location</button> -->
