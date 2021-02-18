@@ -12,18 +12,18 @@ import {interval, Subscription} from 'rxjs'
 export class MapComponent implements OnInit {
   subscription: Subscription;
   intervalId: number;
-  m_driver_coords ={
-    "latitude" : 34.049400,
-    "longitude": -117.706930
-  }
   m_user_coords ={
     "latitude" : 34.049400,
     "longitude": -117.706930
   }
-  
+  m_driver_coords ={
+    "latitude" : 34.055440,
+    "longitude": -117.706580
+  }
+  m_coords_stacks=[this.m_user_coords,this.m_driver_coords]
   m_zoom: number = 14
   
-  m_coords_stacks = []
+  //m_coords_stacks = []
   size: NzButtonSize = 'large'
   title = 'My first AGM project';
   lat = 51.678418;
@@ -42,7 +42,7 @@ export class MapComponent implements OnInit {
        //console.log("hey")
     }
     );
-    this.m_coords_stacks.push([this.m_user_coords,this.m_driver_coords])
+    
   }
   
   public updateDriverCoord(){

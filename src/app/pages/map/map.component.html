@@ -5,6 +5,12 @@
 <agm-map [latitude]="m_driver_coords.latitude" [longitude]="m_driver_coords.longitude" [zoom]="m_zoom">
   <agm-marker [latitude]="m_user_coords.latitude" [longitude]="m_user_coords.longitude"></agm-marker>
   <agm-marker [latitude]="m_driver_coords.latitude" [longitude]="m_driver_coords.longitude"></agm-marker>
+  <agm-polyline [editable]="true">
+    <agm-polyline-point *ngFor="let data of m_coords_stacks" 
+        [latitude]="data.latitude"
+        [longitude]="data.longitude">
+    </agm-polyline-point>
+</agm-polyline>
 </agm-map>
 
 <!-- 
