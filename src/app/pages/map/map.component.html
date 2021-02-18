@@ -3,14 +3,21 @@
 <!-- this creates a google map on the page with the given lat/lng from -->
 <!-- the component as the initial center of the map: -->
 <agm-map [latitude]="m_driver_coords.lat" [longitude]="m_driver_coords.lng" [zoom]="m_zoom">
-  <agm-marker [latitude]="m_user_coords.lat" [longitude]="m_user_coords.lng"></agm-marker>
+  <!-- <agm-marker [latitude]="m_user_coords.lat" [longitude]="m_user_coords.lng"></agm-marker>
   <agm-marker [latitude]="m_driver_coords.lat" [longitude]="m_driver_coords.lng"></agm-marker>
-  <agm-polyline [editable]="true">
+  
+   <agm-polyline [editable]="true">
     <agm-polyline-point *ngFor="let data of m_coords_stacks" 
-        [latitude]="data.lat"
-        [longitude]="data.lng">
+      [latitude]="data.lat"
+      [longitude]="data.lng">
     </agm-polyline-point>
-</agm-polyline>
+    
+  </agm-polyline> --> -->
+<agm-direction 
+      [origin]="m_driver_coords" 
+      [destination]="m_user_coords"
+    >
+</agm-direction>
 </agm-map>
 
 <!-- 

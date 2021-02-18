@@ -53,7 +53,7 @@ registerLocaleData(en);
     NgxStripeModule.forRoot("pk_live_51GwwqJJpV9cXOdRhw2mJFANLPJbH5XwafRmdIDPAjfbMBW7Y3tjaOr4jXtMwQknbbdaCO1aTMa0r4GaeqYd8YCvf00Rpo2xypa"),
     ReactiveFormsModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyDCdWEUdEmkClwVHt3NZsvBjKXWGtJdRWk'
+      apiKey: 'AIzaSyBgTmWI4gm2mjzN8RLAWs9MyeCVucIMT1A'
     })
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],

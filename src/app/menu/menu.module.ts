@@ -17,7 +17,7 @@ import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzSpinModule } from 'ng-zorro-antd/spin';
 import { StripeModule } from "stripe-angular"
 import { NzInputModule } from 'ng-zorro-antd/input';
-
+import { AgmDirectionModule } from 'agm-direction';
 @NgModule({
   declarations: [],
   imports: [
@@ -38,7 +38,8 @@ import { NzInputModule } from 'ng-zorro-antd/input';
     NzButtonModule,
     StripeModule.forRoot("pk_live_51GwwqJJpV9cXOdRhw2mJFANLPJbH5XwafRmdIDPAjfbMBW7Y3tjaOr4jXtMwQknbbdaCO1aTMa0r4GaeqYd8YCvf00Rpo2xypa"),
     NzSpinModule,
-    NzInputModule
+    NzInputModule,
+    AgmDirectionModule
   ],
   exports:[
     NzCardModule,
@@ -56,7 +57,8 @@ import { NzInputModule } from 'ng-zorro-antd/input';
     NzDropDownModule,
     NzButtonModule,
     NzSpinModule,
-    NzInputModule
+    NzInputModule,
+    AgmDirectionModule
   ]
 })
 export class MenuModule { }

@@ -4,6 +4,7 @@ import { NzButtonSize } from 'ng-zorro-antd/button';
 import { NzInputModule } from 'ng-zorro-antd/input';
 import {MenuService} from '../../menu.service'
 import {interval, Subscription} from 'rxjs'
+import { AgmDirectionModule } from 'agm-direction';
 @Component({
   selector: 'app-map',
   templateUrl: './map.component.html',
@@ -17,8 +18,8 @@ export class MapComponent implements OnInit {
     "lng": -117.706930
   }
   m_driver_coords ={
-    "lat" :34.049400,
-    "lng": -117.706930
+    "lat" :34.058660,
+    "lng": -117.749020
   }
   m_coords_stacks=[this.m_user_coords,this.m_driver_coords]
   m_zoom: number = 14
