@@ -51,6 +51,9 @@ export class MenuService {
   public getHours(){
     return this.http.get("https://yume-angular.herokuapp.com/getHours")
   }
+  public getDriverCoord(){
+    return this.http.get("http://localhost:4242/getDriverCoordinates")
+  }
   public receiveAllData(){
      // data is unionized now
     return this.m_flag
