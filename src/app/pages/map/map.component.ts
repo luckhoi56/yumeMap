@@ -13,12 +13,12 @@ export class MapComponent implements OnInit {
   subscription: Subscription;
   intervalId: number;
   m_user_coords ={
-    "latitude" : 34.049400,
-    "longitude": -117.706930
+    "lat" : 34.049400,
+    "lng": -117.706930
   }
   m_driver_coords ={
-    "latitude" : 34.055440,
-    "longitude": -117.706580
+    "lat" :34.049400,
+    "lng": -117.706930
   }
   m_coords_stacks=[this.m_user_coords,this.m_driver_coords]
   m_zoom: number = 14
@@ -31,8 +31,8 @@ export class MapComponent implements OnInit {
   constructor(public menu: MenuService) { }
   async getLocation(){
     const position = await Geolocation.getCurrentPosition();
-    //this.latitude = position.coords.latitude
-    //this.longitude = position.coords.longitude
+    //this.lat = position.coords.lat
+    //this.lng = position.coords.lng
   }
   ngOnInit(): void {
     const source = interval(20000);
@@ -46,17 +46,17 @@ export class MapComponent implements OnInit {
   }
   
   public updateDriverCoord(){
-    this.m_driver_coords.latitude = this.m_user_coords.latitude
-    this.m_driver_coords.longitude = this.m_user_coords.longitude
+    this.m_driver_coords.lat = this.m_user_coords.lat
+    this.m_driver_coords.lng = this.m_user_coords.lng
   }
   public getDriverCoord(){
     this.menu.getDriverCoord().subscribe(data=>{
       console.log("aha becing called")
-      this.m_driver_coords.latitude = data["latitude"]
-      this.m_driver_coords.longitude = data["longitude"]
+      this.m_driver_coords.lat = data["lat"]
+      this.m_driver_coords.lng = data["lng"]
       console.log("data received " +data)
-      console.log("driver's longitude " + this.m_driver_coords.longitude)
-      console.log("driver's latitude " + this.m_driver_coords.latitude)
+      console.log("driver's lng " + this.m_driver_coords.lng)
+      console.log("driver's lat " + this.m_driver_coords.lat)
     })
   }
 }
