@@ -13,7 +13,7 @@
     </agm-polyline-point>
     
   </agm-polyline> --> 
-<agm-direction 
+<agm-direction *ngIf="m_toggle_flag"
       [origin]="m_driver_coords" 
       [destination]="m_user_coords"
     >

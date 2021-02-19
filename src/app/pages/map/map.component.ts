@@ -23,7 +23,7 @@ export class MapComponent implements OnInit {
   }
   m_coords_stacks=[this.m_user_coords,this.m_driver_coords]
   m_zoom: number = 14
-  
+  m_toggle_flag = true
   //m_coords_stacks = []
   size: NzButtonSize = 'large'
   title = 'My first AGM project';
@@ -51,7 +51,9 @@ export class MapComponent implements OnInit {
     this.m_driver_coords.lng = this.m_user_coords.lng
   }
   public getDriverCoord(){
+    this.m_toggle_flag = false
     this.menu.getDriverCoord().subscribe(data=>{
+      this.m_toggle_flag = true
       console.log("aha becing called")
       this.m_driver_coords.lat = data["lat"]
       this.m_driver_coords.lng = data["lng"]
